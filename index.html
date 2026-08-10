@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Untuk Chelyn 🤍</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="bgm" src="assets/bgm.mp3" loop></audio>
+    <div class="particles" id="particles"></div>
+
+    <section id="scene1" class="scene active">
+        <div class="content-wrapper">
+            <p id="s1-text1" class="hidden-text">Chelyn, sebelum kamu pergi...</p>
+            <p id="s1-text2" class="hidden-text mt-2">ada satu hal yang belum Diky bilang.</p>
+            <div id="envelope-container" class="hidden-elem mt-4">
+                <div class="envelope" id="envelope" onclick="openEnvelope()">
+                    <div class="flap"></div>
+                    <div class="pocket"></div>
+                    <div class="letter"><p>Untuk Kamu ✨</p></div>
+                </div>
+                <button class="glass-btn mt-3" onclick="openEnvelope()">Buka suratnya 💌</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="scene2" class="scene">
+        <div class="glass-panel text-center">
+            <p id="s2-text1" class="hidden-text">Sebenernya Diky bingung mau mulai dari mana...</p>
+            <p id="s2-text2" class="hidden-text mt-2">Jadi daripada ngomong langsung...</p>
+            <p id="s2-text3" class="hidden-text mt-2 mb-4">mending bikin website. 😭</p>
+            <button id="s2-btn" class="glass-btn hidden-elem" onclick="nextScene(3)">Lanjut →</button>
+        </div>
+    </section>
+
+    <section id="scene3" class="scene">
+        <div class="glass-panel text-center" id="game-intro">
+            <p>Sekarang kita tes dulu.</p>
+            <p class="mt-2">Kalau kamu berhasil nangkep <span class="highlight">20 hati</span>...</p>
+            <p class="mt-2 mb-4">mungkin kamu bakal tahu kenapa website ini dibuat. 👀</p>
+            <button class="glass-btn" onclick="startGame()">Mulai 🎮</button>
+        </div>
+        <div id="game-play" class="hidden-elem text-center">
+            <div class="game-header"><div class="timer-box">Waktu: <span id="timer">15</span>s</div><div class="score-box">Hati: <span id="score">0</span>/20</div></div>
+            <div class="progress-bar-container mt-2"><div id="progress-bar"></div></div>
+            <div id="game-area"></div>
+        </div>
+        <div id="game-lose" class="glass-panel hidden-elem text-center"><p class="text-xl">Yahhh 😭</p><p class="mt-2 mb-4">Kayaknya hati Diky lebih susah ditangkap daripada ini.</p><button class="glass-btn" onclick="startGame()">Coba lagi</button></div>
+        <div id="game-win" class="glass-panel hidden-elem text-center"><p class="text-xl">OKAY, kamu berhasil. 😭</p><p class="mt-2 mb-4">Sekarang nggak bisa kabur lagi.</p><button class="glass-btn" onclick="nextScene(4)">Lihat alasannya →</button></div>
+    </section>
+
+    <section id="scene4" class="scene text-center">
+        <p id="s4-intro" class="hidden-text">Jadi...<br>Kenapa Diky sampai bikin beginian?</p>
+        <div class="typing-container mt-4"><p id="type-text1" class="typing-text"></p><p id="type-text2" class="typing-text"></p><p id="type-text3" class="typing-text highlight"></p></div>
+        <button id="s4-btn" class="glass-btn hidden-elem mt-4" onclick="nextScene(5)">Lanjut →</button>
+    </section>
+
+    <section id="scene5" class="scene text-center">
+        <div class="glass-panel">
+            <p class="hidden-text s5-anim">Dan masalahnya...</p>
+            <p class="hidden-text s5-anim mt-2 text-xl glitch">Diky ternyata nggak jago ngomong langsung. 💀</p>
+            <div id="chibi-panic" class="hidden-elem my-4 text-4xl">🏃💨 🤯</div>
+            <p class="hidden-text s5-anim mt-2">Makanya jadilah website aneh ini.</p>
+            <button id="s5-btn" class="glass-btn hidden-elem mt-4" onclick="nextScene(6)">Terus? →</button>
+        </div>
+    </section>
+
+    <section id="scene6" class="scene text-center">
+        <div class="main-message">
+            <h2 class="hidden-text s6-anim text-2xl mb-4 title-font">Untuk Chelyn 🤍</h2>
+            <p class="hidden-text s6-anim mt-3">Diky nggak tahu nanti semuanya bakal jadi seperti apa.</p>
+            <p class="hidden-text s6-anim mt-3">Tapi Diky cuma mau kamu tahu...</p>
+            <p class="hidden-text s6-anim mt-3 text-lg">pernah ada seseorang yang benar-benar menghargai kehadiran kamu.</p>
+            <p class="hidden-text s6-anim mt-4 text-xl highlight">Dan orang itu...</p>
+            <p class="hidden-text s6-anim mt-2 text-2xl highlight">ya Diky. 😭</p>
+            <button id="s6-btn" class="glass-btn hidden-elem mt-5" onclick="nextScene(7)">Akhiri →</button>
+        </div>
+    </section>
+
+    <section id="scene7" class="scene text-center">
+        <div class="ending-content">
+            <p class="hidden-text s7-anim">Kalau setelah baca ini kamu masih mau pergi...</p>
+            <p class="hidden-text s7-anim mt-2">yaudah...</p>
+            <p class="hidden-text s7-anim mt-5 text-sm">tapi jangan lupa...</p>
+            <p class="hidden-text s7-anim mt-2 text-xl highlight heart-fade">Diky pernah sayang banget sama kamu. 🤍</p>
+            <button id="s7-btn" class="glass-btn hidden-elem mt-5 heartbeat" onclick="balasWa()">Balas pesan 💌</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
