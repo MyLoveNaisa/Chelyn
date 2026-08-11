@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <meta
+        name="theme-color"
+        content="#080711"
+    >
+
+    <meta
+        name="description"
+        content="Sebuah cerita kecil yang dibuat dengan penuh perasaan."
+    >
+
+    <title>For Chelyn — A Little Story</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div id="background">
+
+        <div class="ambient ambient-1"></div>
+        <div class="ambient ambient-2"></div>
+        <div class="ambient ambient-3"></div>
+
+        <div id="particles"></div>
+        <div id="floating-hearts"></div>
+
+    </div>
+
+
+    <!-- =====================================================
+         PRELOADER
+    ====================================================== -->
+
+    <div id="preloader">
+
+        <div class="loader-content">
+
+            <div class="loader-symbol">♡</div>
+
+            <div class="loader-line">
+                <span></span>
+            </div>
+
+            <p>Preparing something special...</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MUSIC
+    ====================================================== -->
+
+    <audio
+        id="bgm"
+        loop
+        preload="auto"
+    >
+        <!-- GANTI FILE INI DENGAN MP3 KAMU -->
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <button
+        id="music-toggle"
+        class="music-button"
+        type="button"
+        aria-label="Toggle music"
+        onclick="toggleMusic()"
+    >
+
+        <span class="music-icon">♫</span>
+
+        <span id="music-text">
+            MUSIC
+        </span>
+
+        <span class="music-bars">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+
+    </button>
+
+
+    <!-- =====================================================
+         STORY PROGRESS
+    ====================================================== -->
+
+    <div class="story-header">
+
+        <div class="story-label">
+            A LITTLE STORY
+        </div>
+
+        <div class="story-counter">
+            <span id="current-scene">01</span>
+            <span class="counter-line"></span>
+            <span>07</span>
+        </div>
+
+    </div>
+
+
+    <div class="story-progress">
+
+        <div
+            id="story-progress-fill"
+            class="story-progress-fill"
+        ></div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN STORY
+    ====================================================== -->
+
+    <main id="story">
+
+
+        <!-- =================================================
+             SCENE 1 — OPENING
+        ================================================== -->
+
+        <section
+            id="scene1"
+            class="scene active scene-opening"
+        >
+
+            <div class="scene-inner">
+
+                <p class="eyebrow reveal" id="s1-text1">
+                    THIS IS NOT JUST A WEBSITE
+                </p>
+
+                <h1 class="hero-title reveal" id="s1-text2">
+
+                    Ada sesuatu
+                    <br>
+
+                    yang ingin
+                    <em>disampaikan.</em>
+
+                </h1>
+
+
+                <p class="hero-description reveal">
+
+                    Bukan sesuatu yang harus dibaca terburu-buru.
+                    <br>
+                    Jadi, pelan-pelan saja.
+
+                </p>
+
+
+                <!-- ENVELOPE -->
+
+                <div
+                    id="envelope-container"
+                    class="envelope-wrapper reveal"
+                >
+
+                    <button
+                        id="envelope"
+                        class="envelope"
+                        type="button"
+                        onclick="openEnvelope()"
+                        aria-label="Buka surat"
+                    >
+
+                        <div class="envelope-back"></div>
+
+                        <div class="envelope-paper">
+
+                            <span>FOR</span>
+                            <strong>CHELYN</strong>
+
+                        </div>
+
+                        <div class="envelope-front"></div>
+
+                        <div class="envelope-flap"></div>
+
+                        <div class="envelope-seal">
+                            ♡
+                        </div>
+
+                    </button>
+
+
+                    <p class="envelope-hint">
+                       
