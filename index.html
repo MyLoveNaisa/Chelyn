@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no">
+
+    <meta name="theme-color" content="#070711">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>Untuk Chelyn — A Little Story 🤍</title>
+
+    <!-- =========================
+         FONTS
+    ========================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!-- =========================
+         CSS
+    ========================== -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     AUDIO
+========================================================= -->
+
+<audio
+    id="bgm"
+    src="assets/bgm.mp3"
+    loop
+    preload="auto">
+</audio>
+
+
+<!-- =========================================================
+     PRELOADER
+========================================================= -->
+
+<div id="preloader" class="preloader">
+
+    <div class="preloader-inner">
+
+        <div class="preloader-heart">♡</div>
+
+        <p class="preloader-title">
+            Sebentar...
+        </p>
+
+        <p class="preloader-subtitle">
+            ada sesuatu untuk kamu
+        </p>
+
+        <div class="loader">
+            <span></span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     BACKGROUND
+========================================================= -->
+
+<div class="background">
+
+    <div class="aurora aurora-one"></div>
+    <div class="aurora aurora-two"></div>
+    <div class="aurora aurora-three"></div>
+
+    <div id="stars" class="stars"></div>
+
+    <div id="particles" class="particles"></div>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <div class="noise"></div>
+    <div class="vignette"></div>
+
+</div>
+
+
+<!-- =========================================================
+     TOP UI
+========================================================= -->
+
+<header class="top-ui">
+
+    <div class="brand">
+        <span class="brand-symbol">♡</span>
+        <span>for chelyn</span>
+    </div>
+
+    <button
+        id="music-toggle"
+        class="music-button"
+        onclick="toggleMusic()"
+        aria-label="Musik">
+
+        <span class="music-bars">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+
+        <span id="music-text">
+            MUSIC
+        </span>
+
+    </button>
+
+</header>
+
+
+<!-- =========================================================
+     STORY PROGRESS
+========================================================= -->
+
+<div class="story-ui">
+
+    <div class="story-progress">
+
+        <div
+            id="story-progress-fill"
+            class="story-progress-fill">
+        </div>
+
+    </div>
+
+    <div class="story-counter">
+
+        <span id="current-scene">
+            01
+        </span>
+
+        <span class="counter-divider">
+            /
+        </span>
+
+        <span>
+            07
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main id="app">
+
+
+<!-- =========================================================
+     SCENE 1 — OPENING
+========================================================= -->
+
+<section
+    id="scene1"
+    class="scene active">
+
+    <div class="scene-light"></div>
+
+    <div class="opening">
+
+        <div class="opening-label">
+
+            <span></span>
+
+            <p>
+                A LITTLE MESSAGE
+            </p>
+
+            <span></span>
+
+        </div>
+
+
+        <h1 class="opening-title">
+
+            Untuk
+            <em>Chelyn.</em>
+
+        </h1>
+
+
+        <p
+            id="s1-text1"
+            class="fade-text">
+
+            Sebelum kamu melangkah lebih jauh...
+
+        </p>
+
+
+        <p
+            id="s1-text2"
+            class="fade-text secondary">
+
+            ada satu hal yang ingin Diky
+            sampaikan dengan cara yang
+            mungkin sedikit berbeda.
+
+        </p>
+
+
+        <!-- ENVELOPE -->
+
+        <div
+            id="envelope-container"
+            class="envelope-container">
+
+            <div class="envelope-glow"></div>
+
+            <div
+                id="envelope"
+                class="envelope"
+                onclick="openEnvelope()">
+
+                <div class="env-back"></div>
+
+                <div class="env-letter">
+
+                    <div class="letter-top-decoration">
+                        ✦ &nbsp; ♡ &nbsp; ✦
+                    </div>
+
+                    <strong>
+                        Untuk Kamu
+                    </strong>
+
+                    <small>
+                        buka perlahan...
+                    </small>
+
+                </div>
+
+                <div class="env-pocket"></div>
+
+                <div class="env-flap"></div>
+
+                <div class="env-seal">
+                    ♡
+                </div>
+
+            </div>
+
+
+            <button
+                class="luxury-button"
+                onclick="openEnvelope()">
+
+                <span>
+                    Buka surat
+                </span>
+
+                <b>
+                    →
+                </b>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="bottom-hint">
+
+        <span class="hint-line"></span>
+
+        <span>
+            sebuah cerita kecil
+        </span>
+
+        <span class="hint-line"></span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCENE 2 — WHY
+========================================================= -->
+
+<section
+    id="scene2"
+    class="scene">
+
+    <div class="luxury-card">
+
+        <div class="chapter-label">
+
+            <span>
+                01
+            </span>
+
+            <div></div>
+
+            <span>
+                WHY I MADE THIS
+            </span>
+
+        </div>
+
+
+        <div class="card-content">
+
+            <p class="small-heading">
+                Jujur sedikit...
+            </p>
+
+
+            <p
+                id="s2-text1"
+                class="story-text reveal-text">
+
+                Sebenernya Diky bingung
+                harus mulai dari mana.
+
+            </p>
+
+
+            <p
+                id="s2-text2"
+                class="story-text reveal-text">
+
+                Ada terlalu banyak hal yang
+                ingin disampaikan, tapi setiap
+                kali ingin mengatakannya langsung,
+                kata-katanya justru menghilang.
+
+            </p>
+
+
+            <p
+                id="s2-text3"
+                class="story-text reveal-text">
+
+                Jadi akhirnya Diky memilih cara
+                yang agak aneh...
+
+                <strong>
+                    bikin website sendiri.
+                </strong>
+
+            </p>
+
+
+            <div
+                id="s2-quote"
+                class="quote reveal-text">
+
+                <span>“</span>
+
+                <p>
+                    Beberapa perasaan ternyata
+                    lebih mudah ditulis daripada
+                    diucapkan.
+                </p>
+
+                <span>”</span>
+
+            </div>
+
+
+            <button
+                id="s2-btn"
+                class="luxury-button"
+                onclick="nextScene(3)">
+
+                <span>
+                    Lanjutkan cerita
+                </span>
+
+                <b>
+                    →
+                </b>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCENE 3 — GAME
+========================================================= -->
+
+<section
+    id="scene3"
+    class="scene">
+
+
+    <!-- GAME INTRO -->
+
+    <div
+        id="game-intro"
+        class="game-card">
+
+        <div class="game-symbol">
+            ♡
+        </div>
+
+        <p class="small-heading">
+            ONE LITTLE CHALLENGE
+        </p>
+
+        <h2>
+            Tangkap hatinya.
+        </h2>
+
+        <p class="game-description">
+
+            Ada 20 hati yang harus kamu
+            tangkap sebelum waktu habis.
+
+            <br>
+
+            Kalau berhasil...
+            mungkin kamu boleh lanjut.
+
+        </p>
+
+
+        <div class="game-rules">
+
+            <div>
+                <strong>
+                    20
+                </strong>
+
+                <span>
+                    HATI
+                </span>
+            </div>
+
+
+            <div class="rule-line"></div>
+
+
+            <div>
+                <strong>
+                    15
+                </strong>
+
+                <span>
+                    DETIK
+                </span>
+            </div>
+
+        </div>
+
+
+        <p class="game-warning">
+            Jangan bilang kamu nggak bisa. 😭
+        </p>
+
+
+        <button
+            class="luxury-button center"
+            onclick="startGame()">
+
+            <span>
+                Mulai challenge
+            </span>
+
+            <b>
+                ♡
+            </b>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- GAME -->
+
+    <div
+        id="game-play"
+        class="game-screen hidden">
+
+        <div class="game-header">
+
+            <div class="game-stat">
+
+                <small>
+                    TIME
+                </small>
+
+                <strong>
+                    <span id="timer">
+                        15
+                    </span>
+                    <i>s</i>
+                </strong>
+
+            </div>
+
+
+            <div class="game-center-title">
+                CATCH MY HEART
+            </div>
+
+
+            <div class="game-stat right">
+
+                <small>
+                    HEART
+                </small>
+
+                <strong>
+                    <span id="score">
+                        0
+                    </span>
+
+                    <i>
+                        /20
+                    </i>
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="game-progress">
+            <div id="progress-bar"></div>
+        </div>
+
+
+        <div
+            id="game-area"
+            class="game-area">
+        </div>
+
+
+        <p class="game-tip">
+            tap the hearts before they disappear ✦
+        </p>
+
+    </div>
+
+
+
+    <!-- GAME LOSE -->
+
+    <div
+        id="game-lose"
+        class="result-card hidden">
+
+        <div class="result-symbol">
+            :(
+        </div>
+
+        <p class="small-heading">
+            TIME'S UP
+        </p>
+
+        <h2>
+            Yahhh...
+        </h2>
+
+        <p>
+            Hatinya kabur semua. 😭
+            Tapi tenang, kesempatan kedua masih ada.
+        </p>
+
+        <button
+            class="luxury-button"
+            onclick="startGame()">
+
+            Coba lagi
+
+        </button>
+
+    </div>
+
+
+
+    <!-- GAME WIN -->
+
+    <div
+        id="game-win"
+        class="result-card hidden">
+
+        <div class="result-symbol win">
+            ♡
+        </div>
+
+        <p class="small-heading">
+            YOU DID IT
+        </p>
+
+        <h2>
+            Kamu berhasil.
+        </h2>
+
+        <p>
+            Oke...
+            sekarang kamu sudah sampai sejauh ini.
+        </p>
+
+        <p class="result-small">
+            Jadi jangan pergi dulu.
+        </p>
+
+        <button
+            class="luxury-button"
+            onclick="nextScene(4)">
+
+            Aku mau tahu alasannya →
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCENE 4 — STORY
+========================================================= -->
+
+<section
+    id="scene4"
+    class="scene">
+
+    <div class="cinematic">
+
+        <div class="chapter-label">
+
+            <span>
+                02
+            </span>
+
+            <div></div>
+
+            <span>
+                THE REASON
+            </span>
+
+        </div>
+
+
+        <p
+            id="s4-intro"
+            class="cinematic-intro">
+
+            Jadi...
+            <br>
+
+            kenapa Diky sampai
+            bikin semua ini?
+
+        </p>
+
+
+        <div class="typing-story">
+
+            <div class="typing-item">
+
+                <span></span>
+
+                <p id="type-text1"></p>
+
+            </div>
+
+
+            <div class="typing-item">
+
+                <span></span>
+
+                <p id="type-text2"></p>
+
+            </div>
+
+
+            <div class="typing-item special">
+
+                <span></span>
+
+                <p id="type-text3"></p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="s4-quote"
+            class="cinematic-quote">
+
+            Ada orang yang datang sebentar,
+            tapi entah kenapa jejaknya
+            tinggal lebih lama.
+
+        </div>
+
+
+        <button
+            id="s4-btn"
+            class="luxury-button"
+            onclick="nextScene(5)">
+
+            <span>
+                Lanjut
+            </span>
+
+            <b>
+                →
+            </b>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCENE 5 — CONFESSION
+========================================================= -->
+
+<section
+    id="scene5"
+    class="scene">
+
+    <div class="confession-card">
+
+        <div class="chapter-label">
+
+            <span>
+                03
+            </span>
+
+            <div></div>
+
+            <span>
+                A LITTLE CONFESSION
+            </span>
+
+        </div>
+
+
+        <div class="confession-content">
+
+            <p
+                class="reveal-text s5-anim intro-small">
+
+                Dan mungkin...
+            </p>
+
+
+            <h2
+                class="reveal-text s5-anim">
+
+                Diky memang
+                <em>
+                    nggak jago
+                </em>
+                ngomong langsung.
+
+            </h2>
+
+
+            <div
+                id="chibi-panic"
+                class="panic-animation">
+
+                <span>🏃</span>
+                <span>💨</span>
+                <span>🤯</span>
+
+            </div>
+
+
+            <p
+                class="reveal-text s5-anim">
+
+                Kadang sudah menyiapkan
+                banyak hal di kepala,
+                tapi ketika waktunya bicara...
+
+                <br><br>
+
+                malah jadi diam.
+
+            </p>
+
+
+            <p
+                class="reveal-text s5-anim">
+
+                Bukan karena nggak punya
+                sesuatu untuk dikatakan.
+
+                <br>
+
+                Justru karena ada
+                <strong>
+                    terlalu banyak
+                </strong>
+                yang ingin dikatakan.
+
+            </p>
+
+
+            <div
+                class="confession-highlight reveal-text s5-anim">
+
+                <span>
+                    ♡
+                </span>
+
+                <p>
+                    Jadi website ini adalah
+                    cara Diky untuk mengatakan
+                    sesuatu yang mungkin selama
+                    ini susah disampaikan.
+                </p>
+
+            </div>
+
+
+            <button
+                id="s5-btn"
+                class="luxury-button"
+                onclick="nextScene(6)">
+
+                <span>
+                    Baca sampai akhir
+                </span>
+
+                <b>
+                    →
+                </b>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCENE 6 — LETTER
+========================================================= -->
+
+<section
+    id="scene6"
+    class="scene">
+
+    <div class="letter-page">
+
+        <div class="letter-heading">
+
+            <span>
+                A LETTER
+            </span>
+
+            <span>
+                04 / 07
+            </span>
+
+        </div>
+
+
+        <div class="letter-line"></div>
+
+
+        <div class="main-message">
+
+            <p
+                class="s6-anim reveal-text">
+
+                Chelyn...
+            </p>
+
+
+            <p
+                class="s6-anim reveal-text">
+
+                Diky nggak tahu nanti
+                semuanya bakal menjadi
+                seperti apa.
+
+            </p>
+
+
+            <p
+                class="s6-anim reveal-text">
+
+                Mungkin waktu akan membawa
+                kita ke tempat yang berbeda.
+                Mungkin keadaan berubah.
+                Mungkin suatu hari nanti
+                semuanya hanya menjadi
+                sebuah cerita lama.
+
+            </p>
+
+
+            <p
+                class="s6-anim reveal-text">
+
+                Tapi sebelum hari itu datang,
+                Diky cuma ingin kamu tahu
+                satu hal sederhana.
+
+            </p>
+
+
+            <div
+                class="big-statement s6-anim reveal-text">
+
+                <span>
+                    Kehadiran kamu
+                </span>
+
+                <strong>
+                    pernah berarti.
+                </strong>
+
+            </div>
+
+
+            <p
+                class="s6-anim reveal-text">
+
+                Bahkan mungkin lebih berarti
+                daripada yang pernah Diky
+                tunjukkan.
+
+            </p>
+
+
+            <p
+                class="s6-anim reveal-text">
+
+                Diky mungkin bukan orang
+                yang paling pintar menunjukkan
+                perasaan.
+
+                Tapi Diky tahu bagaimana
+                rasanya menghargai seseorang.
+
+            </p>
+
+
+            <p
+                class="s6-anim reveal-text">
+
+                Dan kalau selama ini ada
+                sesuatu yang belum pernah
+                Diky katakan dengan jelas...
+
+            </p>
+
+
+            <p
+                class="s6-anim reveal-text final-sentence">
+
+                <span>
+                    terima kasih
+                </span>
+                sudah pernah menjadi
+                bagian dari cerita Diky.
+
+            </p>
+
+        </div>
+
+
+        <button
+            id="s6-btn"
+            class="luxury-button"
+            onclick="nextScene(7)">
+
+            <span>
+                Satu hal terakhir...
+            </span>
+
+            <b>
+                →
+            </b>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCENE 7 — FINAL
+========================================================= -->
+
+<section
+    id="scene7"
+    class="scene">
+
+    <div class="finale">
+
+        <div class="finale-orbit orbit-one"></div>
+        <div class="finale-orbit orbit-two"></div>
+
+
+        <div class="final-heart">
+            ♡
+        </div>
+
+
+        <p
+            class="s7-anim reveal-text final-label">
+
+            BEFORE YOU LEAVE
+        </p>
+
+
+        <h2
+            class="s7-anim reveal-text final-title">
+
+            Kalau setelah
+            membaca semuanya
+            kamu masih ingin pergi...
+
+        </h2>
+
+
+        <p
+            class="s7-anim reveal-text final-soft">
+
+            nggak apa-apa.
+
+        </p>
+
+
+        <div
+            class="s7-anim reveal-text final-paragraph">
+
+            <p>
+                Diky nggak mau memaksa
+                kamu untuk tinggal.
+            </p>
+
+            <p>
+                Karena perasaan yang baik
+                seharusnya bukan tentang
+                memaksa seseorang untuk memilih kita.
+            </p>
+
+            <p>
+                Tapi tentang bersyukur
+                karena pernah punya kesempatan
+                untuk mengenal seseorang
+                yang berarti.
+            </p>
+
+        </div>
+
+
+        <div
+            class="s7-anim reveal-text final-highlight">
+
+            <span>
+                Dan kalau suatu hari nanti
+                kamu mengingat Diky...
+            </span>
+
+            <strong>
+                semoga yang kamu ingat
+                adalah hal-hal baiknya.
+            </strong>
+
+        </div>
+
+
+        <p
+            class="s7-anim reveal-text final-love">
+
+            Diky pernah sayang
+            banget sama kamu. 🤍
+
+        </p>
+
+
+        <div
+            class="s7-anim reveal-text signature">
+
+            <span>
+                — Diky
+            </span>
+
+        </div>
+
+
+        <button
+            id="s7-btn"
+            class="luxury-button heartbeat"
+            onclick="balasWa()">
+
+            <span>
+                Balas pesan
+            </span>
+
+            <b>
+                ♡
+            </b>
+
+        </button>
+
+
+        <p class="final-footer">
+
+            dibuat dengan sedikit keberanian
+            dan terlalu banyak perasaan.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FLOATING HEARTS
+========================================================= -->
+
+<div
+    id="floating-hearts"
+    class="floating-hearts">
+</div>
+
+
+<!-- =========================================================
+     TRANSITION
+========================================================= -->
+
+<div
+    id="transition"
+    class="transition">
+</div>
+
+
+<!-- =========================================================
+     SCRIPT
+========================================================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
